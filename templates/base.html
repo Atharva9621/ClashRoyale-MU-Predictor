@@ -10,9 +10,9 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}"/>  
 </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="opacity: 0.8; border-radius: 0 0 20px 20px;">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Clash Royale</a>
+          <a class="navbar-brand fw-bold" href="#">Clash Royale</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -22,19 +22,26 @@
                 <a class="nav-link active" aria-current="page" href="#">MU Predictor</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Top Decks</a>
+                <a class="nav-link active" href="#">Top Decks</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">RoyaleAPI</a>
+                <a class="nav-link active" href="#">RoyaleAPI</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
   
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
  
-    {% block body %}
-    {% endblock body %}
+      {% block body %}
+      {% endblock body %}
+
+      <div class="text-center fw-bold p-4" style="background-color: rgba(255, 255, 255, 0.8); border-radius: 50px 50px 0px 0px;">
+        © 2023 
+        <a class="text-reset fw-bold" href="https://supercell.com/en/" style="text-decoration: none;">Supercell</a>
+      </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
     </body>
 </html>

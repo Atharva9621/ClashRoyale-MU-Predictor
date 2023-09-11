@@ -46,7 +46,7 @@
             .inner-div {
             width: 20%; /* 5 inner divs in a row */
             box-sizing: border-box;
-            padding: 10px; /* Add spacing between images as needed */
+            padding: 1vw; /* Add spacing between images as needed */
             flex: 1;
             }
 
@@ -54,52 +54,101 @@
             width: 100%; /* Ensure images take up the full width of the inner div */
             height: auto; /* Maintain image aspect ratio */
             }
+            .clicked{
+                opacity: 0.5;
+                color: brown;
+            }
     </style>
+    <script>
+        const clickableImages = document.querySelectorAll('.clickable-image');
+            clickableImages.forEach(image => {
+                console
+            image.addEventListener('click', () => {
+                console.log('i got cicked')
+                image.classList.toggle('clicked');
+            });
+        });
+    </script>
     <div class="outer-container" id="abc1">
         <div class="center-div">
-            Please select the 16 cards
+            <h3>Please select the 16 cards</h3>
         </div>
         <div style="display: flex;">
             <div class="left-container">
                 <div class="container">
                     <div class="row">
                       <div class="inner-div">
-                        <img src="../static/img/cards/archers.png" alt="Image 1">
-                        <img src="../static/img/cards/archers.png" alt="Image 2">
-                        <img src="../static/img/cards/archers.png" alt="Image 3">
-                        <img src="../static/img/cards/archers.png" alt="Image 4">
-                        <img src="../static/img/cards/archers.png" alt="Image 5">
+                        <img src="../static/img/cards/archers.png" alt="0">
+                        <img src="../static/img/cards/arrows.png" alt="1">
+                        <img src="../static/img/cards/baby-dragon.png" alt="2">
+                        <img src="../static/img/cards/balloon.png" alt="3">
+                        <img src="../static/img/cards/bandit.png" alt="4">
                       </div>
                       
                       <div class="inner-div">
-                        <img src="../static/img/cards/archers.png" alt="Image 6">
-                        <img src="../static/img/cards/archers.png" alt="Image 7">
-                        <img src="../static/img/cards/archers.png" alt="Image 8">
-                        <img src="../static/img/cards/archers.png" alt="Image 9">
-                        <img src="i" alt="Image 10">
+                        <img src="../static/img/cards/barbarian-barrel.png" alt="0">
+                        <img src="../static/img/cards/barbarian-hut.png" alt="1">
+                        <img src="../static/img/cards/barbarians.png" alt="2">
+                        <img src="../static/img/cards/bats.png" alt="3">
+                        <img src="../static/img/cards/battle-healer.png" alt="4">
                       </div>
 
                       <div class="inner-div">
-                        <img src="../static/img/cards/archers.png" alt="Image 6">
-                        <img src="../static/img/cards/archers.png" alt="Image 7">
-                        <img src="../static/img/cards/archers.png" alt="Image 8">
-                        <img src="../static/img/cards/archers.png" alt="Image 9">
-                        <img src="i" alt="Image 10">
+                        <img src="../static/img/cards/bomb-tower.png" alt="0">
+                        <img src="../static/img/cards/bomber.png" alt="1">
+                        <img src="../static/img/cards/bowler.png" alt="2">
+                        <img src="../static/img/cards/cannon-cart.png" alt="3">
+                        <img src="../static/img/cards/cannon.png" alt="4">
                       </div>
 
                       <div class="inner-div">
-                        <img src="../static/img/cards/archers.png" alt="Image 6">
-                        <img src="../static/img/cards/archers.png" alt="Image 7">
-                        <img src="../static/img/cards/archers.png" alt="Image 8">
-                        <img src="../static/img/cards/archers.png" alt="Image 9">
-                        <img src="i" alt="Image 10">
+                        <img src="../static/img/cards/clone.png" alt="0">
+                        <img src="../static/img/cards/dark-prince.png" alt="1">
+                        <img src="../static/img/cards/dart-goblin.png" alt="2">
+                        <img src="../static/img/cards/earthquake.png" alt="3">
+                        <img src="../static/img/cards/electro-dragon.png" alt="4">
                       </div>
                     </div>
                   </div>
                   
             </div>
             <div class="right-container">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus nam officiis, magni quo nostrum consectetur corporis esse numquam nemo, est iste suscipit sunt, dolorem accusantium deserunt. Vel minima labore asperiores!
+                <div class="container">
+                    <div class="row">
+                      <div class="inner-div">
+                        <img src="../static/img/cards/archers.png" class="clickable-image" id="0">
+                        <img src="../static/img/cards/arrows.png" class="clickable-img" id="1">
+                        <img src="../static/img/cards/baby-dragon.png" class="clickable-img" id="2">
+                        <img src="../static/img/cards/balloon.png" class="clickable-img" id="3">
+                        <img src="../static/img/cards/bandit.png" class="clickable-img" id="4">
+                      </div>
+                      
+                      <div class="inner-div">
+                        <img src="../static/img/cards/barbarian-barrel.png" alt="0">
+                        <img src="../static/img/cards/barbarian-hut.png" alt="1">
+                        <img src="../static/img/cards/barbarians.png" alt="2">
+                        <img src="../static/img/cards/bats.png" alt="3">
+                        <img src="../static/img/cards/battle-healer.png" alt="4">
+                      </div>
+
+                      <div class="inner-div">
+                        <img src="../static/img/cards/bomb-tower.png" alt="0">
+                        <img src="../static/img/cards/bomber.png" alt="1">
+                        <img src="../static/img/cards/bowler.png" alt="2">
+                        <img src="../static/img/cards/cannon-cart.png" alt="3">
+                        <img src="../static/img/cards/cannon.png" alt="4">
+                      </div>
+
+                      <div class="inner-div">
+                        <img src="../static/img/cards/clone.png" alt="0">
+                        <img src="../static/img/cards/dark-prince.png" alt="1">
+                        <img src="../static/img/cards/dart-goblin.png" alt="2">
+                        <img src="../static/img/cards/earthquake.png" alt="3">
+                        <img src="../static/img/cards/electro-dragon.png" alt="4">
+                      </div>
+                    </div>
+                  </div>
+
             </div>
         </div>
         <div class="center-div">
