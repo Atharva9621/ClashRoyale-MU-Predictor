@@ -55,20 +55,11 @@
             height: auto; /* Maintain image aspect ratio */
             }
             .clicked{
-                opacity: 0.5;
-                color: brown;
+                /* opacity: 0.5; */
+                filter: grayscale();
+                /* filter: brightness(1.5); */
             }
     </style>
-    <script>
-        const clickableImages = document.querySelectorAll('.clickable-image');
-            clickableImages.forEach(image => {
-                console
-            image.addEventListener('click', () => {
-                console.log('i got cicked')
-                image.classList.toggle('clicked');
-            });
-        });
-    </script>
     <div class="outer-container" id="abc1">
         <div class="center-div">
             <h3>Please select the 16 cards</h3>
@@ -78,35 +69,35 @@
                 <div class="container">
                     <div class="row">
                       <div class="inner-div">
-                        <img src="../static/img/cards/archers.png" alt="0">
-                        <img src="../static/img/cards/arrows.png" alt="1">
-                        <img src="../static/img/cards/baby-dragon.png" alt="2">
-                        <img src="../static/img/cards/balloon.png" alt="3">
-                        <img src="../static/img/cards/bandit.png" alt="4">
+                        <img src="../static/img/cards/archers.png" class="clickable-image" id="0">
+                        <img src="../static/img/cards/arrows.png" class="clickable-image" id="1">
+                        <img src="../static/img/cards/baby-dragon.png" class="clickable-image" id="2">
+                        <img src="../static/img/cards/balloon.png" class="clickable-image" id="3">
+                        <img src="../static/img/cards/bandit.png" class="clickable-image" id="4">
                       </div>
                       
                       <div class="inner-div">
-                        <img src="../static/img/cards/barbarian-barrel.png" alt="0">
-                        <img src="../static/img/cards/barbarian-hut.png" alt="1">
-                        <img src="../static/img/cards/barbarians.png" alt="2">
-                        <img src="../static/img/cards/bats.png" alt="3">
-                        <img src="../static/img/cards/battle-healer.png" alt="4">
+                        <img src="../static/img/cards/barbarian-barrel.png" alt="0" class="clickable-image" >
+                        <img src="../static/img/cards/barbarian-hut.png" alt="1" class="clickable-image" >
+                        <img src="../static/img/cards/barbarians.png" alt="2" class="clickable-image" >
+                        <img src="../static/img/cards/bats.png" alt="3" class="clickable-image" >
+                        <img src="../static/img/cards/battle-healer.png" alt="4" class="clickable-image" >
                       </div>
 
                       <div class="inner-div">
-                        <img src="../static/img/cards/bomb-tower.png" alt="0">
-                        <img src="../static/img/cards/bomber.png" alt="1">
-                        <img src="../static/img/cards/bowler.png" alt="2">
-                        <img src="../static/img/cards/cannon-cart.png" alt="3">
-                        <img src="../static/img/cards/cannon.png" alt="4">
+                        <img src="../static/img/cards/bomb-tower.png" alt="0" class="clickable-image" >
+                        <img src="../static/img/cards/bomber.png" alt="1" class="clickable-image" >
+                        <img src="../static/img/cards/bowler.png" alt="2" class="clickable-image" >
+                        <img src="../static/img/cards/cannon-cart.png" alt="3" class="clickable-image" >
+                        <img src="../static/img/cards/cannon.png" alt="4" class="clickable-image" >
                       </div>
 
                       <div class="inner-div">
-                        <img src="../static/img/cards/clone.png" alt="0">
-                        <img src="../static/img/cards/dark-prince.png" alt="1">
-                        <img src="../static/img/cards/dart-goblin.png" alt="2">
-                        <img src="../static/img/cards/earthquake.png" alt="3">
-                        <img src="../static/img/cards/electro-dragon.png" alt="4">
+                        <img src="../static/img/cards/clone.png" alt="0" class="clickable-image" >
+                        <img src="../static/img/cards/dark-prince.png" alt="1" class="clickable-image" >
+                        <img src="../static/img/cards/dart-goblin.png" alt="2" class="clickable-image" >
+                        <img src="../static/img/cards/earthquake.png" alt="3" class="clickable-image" >
+                        <img src="../static/img/cards/electro-dragon.png" alt="4" class="clickable-image" >
                       </div>
                     </div>
                   </div>
@@ -117,34 +108,34 @@
                     <div class="row">
                       <div class="inner-div">
                         <img src="../static/img/cards/archers.png" class="clickable-image" id="0">
-                        <img src="../static/img/cards/arrows.png" class="clickable-img" id="1">
-                        <img src="../static/img/cards/baby-dragon.png" class="clickable-img" id="2">
-                        <img src="../static/img/cards/balloon.png" class="clickable-img" id="3">
-                        <img src="../static/img/cards/bandit.png" class="clickable-img" id="4">
+                        <img src="../static/img/cards/arrows.png" class="clickable-image" id="1">
+                        <img src="../static/img/cards/baby-dragon.png" class="clickable-image" id="2">
+                        <img src="../static/img/cards/balloon.png" class="clickable-image" id="3">
+                        <img src="../static/img/cards/bandit.png" class="clickable-image" id="4">
                       </div>
                       
                       <div class="inner-div">
-                        <img src="../static/img/cards/barbarian-barrel.png" alt="0">
-                        <img src="../static/img/cards/barbarian-hut.png" alt="1">
-                        <img src="../static/img/cards/barbarians.png" alt="2">
-                        <img src="../static/img/cards/bats.png" alt="3">
-                        <img src="../static/img/cards/battle-healer.png" alt="4">
+                        <img src="../static/img/cards/barbarian-barrel.png" id="0" class="clickable-image" >
+                        <img src="../static/img/cards/barbarian-hut.png" id="1" class="clickable-image" >
+                        <img src="../static/img/cards/barbarians.png" id="2" class="clickable-image" >
+                        <img src="../static/img/cards/bats.png" id="3" class="clickable-image" >
+                        <img src="../static/img/cards/battle-healer.png" id="4" class="clickable-image" >
                       </div>
 
                       <div class="inner-div">
-                        <img src="../static/img/cards/bomb-tower.png" alt="0">
-                        <img src="../static/img/cards/bomber.png" alt="1">
-                        <img src="../static/img/cards/bowler.png" alt="2">
-                        <img src="../static/img/cards/cannon-cart.png" alt="3">
-                        <img src="../static/img/cards/cannon.png" alt="4">
+                        <img src="../static/img/cards/bomb-tower.png" id="0" class="clickable-image" >
+                        <img src="../static/img/cards/bomber.png" id="1" class="clickable-image" >
+                        <img src="../static/img/cards/bowler.png" id="2" class="clickable-image" >
+                        <img src="../static/img/cards/cannon-cart.png" id="3" class="clickable-image" >
+                        <img src="../static/img/cards/cannon.png" id="4" class="clickable-image" >
                       </div>
 
                       <div class="inner-div">
-                        <img src="../static/img/cards/clone.png" alt="0">
-                        <img src="../static/img/cards/dark-prince.png" alt="1">
-                        <img src="../static/img/cards/dart-goblin.png" alt="2">
-                        <img src="../static/img/cards/earthquake.png" alt="3">
-                        <img src="../static/img/cards/electro-dragon.png" alt="4">
+                        <img src="../static/img/cards/clone.png" id="0" class="clickable-image" >
+                        <img src="../static/img/cards/dark-prince.png" id="1" class="clickable-image" >
+                        <img src="../static/img/cards/dart-goblin.png" id="2" class="clickable-image" >
+                        <img src="../static/img/cards/earthquake.png" id="3" class="clickable-image" >
+                        <img src="../static/img/cards/electro-dragon.png" id="4" class="clickable-image" >
                       </div>
                     </div>
                   </div>
@@ -152,7 +143,38 @@
             </div>
         </div>
         <div class="center-div">
-            <button type="button" class="btn btn-primary">Predict</button>
+            <button type="button" class="btn btn-primary" id="predict_button"  name="csrfmiddlewaretoken" value="{% csrf_token %}">{% csrf_token %} Predict</button>
+            <input type="hidden" name="csrfmiddlewaretoken" value="{% csrf_token %}">
         </div>
     </div>
+
+    <script>
+        let cardIndices = []
+
+        const clickableImages = document.querySelectorAll('.clickable-image');
+            clickableImages.forEach(image => {
+            image.addEventListener('click', () => {
+                image.classList.toggle('clicked');
+                const imageId = image.getAttribute('id');
+                console.log(imageId)
+                if(!(imageId in cardIndices)){
+                    cardIndices.push(imageId)
+                }
+                console.log(cardIndices)
+            });
+        });
+        const predictButton = document.getElementById('predict_button');
+        predictButton.addEventListener('click', ()=>{
+            const csrfToken = document.querySelector('input[name="csrfmiddlewaretoken"]').value;
+            console.log("I got clikkity clikked");
+            fetch('/home/result', {
+            method: 'POST',
+            body: 2,
+            header : {
+                'X-CSRFToken': csrfToken, // Include the CSRF token in the headers
+            },
+        })
+        })
+    </script>
+
 {% endblock body %}
