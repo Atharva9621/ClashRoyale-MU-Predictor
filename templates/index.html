@@ -18,6 +18,7 @@
             margin: 1vw;
             border-radius: 10px;
             padding: 50px 2vw;
+            flex-direction: column;
             /* width: 40vw; */
         }
         .right-container{
@@ -35,6 +36,24 @@
         .card-row{
             display: flex;
         }
+
+        .container {
+            width: 100%; /* Adjust the width as needed */
+            display: flex;
+            flex-wrap: wrap;
+            }
+
+            .inner-div {
+            width: 20%; /* 5 inner divs in a row */
+            box-sizing: border-box;
+            padding: 10px; /* Add spacing between images as needed */
+            flex: 1;
+            }
+
+            img {
+            width: 100%; /* Ensure images take up the full width of the inner div */
+            height: auto; /* Maintain image aspect ratio */
+            }
     </style>
     <div class="outer-container" id="abc1">
         <div class="center-div">
@@ -42,21 +61,42 @@
         </div>
         <div style="display: flex;">
             <div class="left-container">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, et. Quisquam autem excepturi id similique, velit aperiam. Assumenda magni id sunt odio molestias asperiores laudantium odit quidem pariatur, fugit dolore quaerat atque.
-                <!-- <div class="card-row">
-                    <img src="../static/img/cards/archer-queen.png" id="1">
-                    <img src="../static/img/cards/archer-queen.png" id="2">
-                    <img src="../static/img/cards/archer-queen.png" id="3">
-                    <img src="../static/img/cards/archer-queen.png" id="4">
-                    <img src="../static/img/cards/archer-queen.png" id="5">
-                </div>
-                <div class="card-row">
-                    <img src="../static/img/cards/archer-queen.png" id="1">
-                    <img src="../static/img/cards/archer-queen.png" id="2">
-                    <img src="../static/img/cards/archer-queen.png" id="3">
-                    <img src="../static/img/cards/archer-queen.png" id="4">
-                    <img src="../static/img/cards/archer-queen.png" id="5">
-                </div> -->
+                <div class="container">
+                    <div class="row">
+                      <div class="inner-div">
+                        <img src="../static/img/cards/archers.png" alt="Image 1">
+                        <img src="../static/img/cards/archers.png" alt="Image 2">
+                        <img src="../static/img/cards/archers.png" alt="Image 3">
+                        <img src="../static/img/cards/archers.png" alt="Image 4">
+                        <img src="../static/img/cards/archers.png" alt="Image 5">
+                      </div>
+                      
+                      <div class="inner-div">
+                        <img src="../static/img/cards/archers.png" alt="Image 6">
+                        <img src="../static/img/cards/archers.png" alt="Image 7">
+                        <img src="../static/img/cards/archers.png" alt="Image 8">
+                        <img src="../static/img/cards/archers.png" alt="Image 9">
+                        <img src="i" alt="Image 10">
+                      </div>
+
+                      <div class="inner-div">
+                        <img src="../static/img/cards/archers.png" alt="Image 6">
+                        <img src="../static/img/cards/archers.png" alt="Image 7">
+                        <img src="../static/img/cards/archers.png" alt="Image 8">
+                        <img src="../static/img/cards/archers.png" alt="Image 9">
+                        <img src="i" alt="Image 10">
+                      </div>
+
+                      <div class="inner-div">
+                        <img src="../static/img/cards/archers.png" alt="Image 6">
+                        <img src="../static/img/cards/archers.png" alt="Image 7">
+                        <img src="../static/img/cards/archers.png" alt="Image 8">
+                        <img src="../static/img/cards/archers.png" alt="Image 9">
+                        <img src="i" alt="Image 10">
+                      </div>
+                    </div>
+                  </div>
+                  
             </div>
             <div class="right-container">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus nam officiis, magni quo nostrum consectetur corporis esse numquam nemo, est iste suscipit sunt, dolorem accusantium deserunt. Vel minima labore asperiores!
