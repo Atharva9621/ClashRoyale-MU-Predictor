@@ -55,7 +55,6 @@
             height: auto; /* Maintain image aspect ratio */
             }
             .clicked{
-                /* opacity: 0.5; */
                 filter: grayscale();
                 /* filter: brightness(1.5); */
             }
@@ -142,14 +141,23 @@
 
             </div>
         </div>
-        <div class="center-div">
+        <!-- <div class="center-div">
             <button type="button" class="btn btn-primary" id="predict_button"  name="csrfmiddlewaretoken" value="{% csrf_token %}">{% csrf_token %} Predict</button>
             <input type="hidden" name="csrfmiddlewaretoken" value="{% csrf_token %}">
+        </div> -->
+        <div class="center-div">
+            <form method="post" id="card-form" action="/result">
+                {% csrf_token %}
+                <input type="hidden" name="cards"/>
+                <input type="hidden" name="dummy" value="orange"/>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
         </div>
     </div>
 
     <script>
         let cardIndices = []
+        let opponentCardIndices = []
 
         const clickableImages = document.querySelectorAll('.clickable-image');
             clickableImages.forEach(image => {
@@ -163,18 +171,10 @@
                 console.log(cardIndices)
             });
         });
-        const predictButton = document.getElementById('predict_button');
-        predictButton.addEventListener('click', ()=>{
-            const csrfToken = document.querySelector('input[name="csrfmiddlewaretoken"]').value;
-            console.log("I got clikkity clikked");
-            fetch('/home/result', {
-            method: 'POST',
-            body: 2,
-            header : {
-                'X-CSRFToken': csrfToken, // Include the CSRF token in the headers
-            },
-        })
-        })
+        document.getElementById('card-form').onsubmit = function(){
+          this.elements.cards.value = cardIndices;
+          return true;
+        }
     </script>
 
 {% endblock body %}
