@@ -3,7 +3,17 @@
 {% block title %}Result{% endblock title %}
 
 {% block body %}
-    <div style="display: flex; height: 100vh; align-items: center; justify-content: center;">
+    <style>
+        .result-box{
+            display: flex;
+            height: 100vh;
+            align-items: center; 
+            justify-content: center;
+            background-color: rgba(240, 240, 240, 0.7); 
+            padding: 10px, 2vw;          
+        }
+    </style>
+    <div class="result-box">
     {{MU_result}} 
     </div>
 {% endblock body %}
