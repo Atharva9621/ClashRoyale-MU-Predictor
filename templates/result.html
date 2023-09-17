@@ -4,17 +4,42 @@
 
 {% block body %}
     <style>
-        .result-box{
+        .hidden{
+            display: none;
+        }
+        .height-container{
             display: flex;
             height: 100vh;
             align-items: center; 
             justify-content: center;
-            background-color: rgba(240, 240, 240, 0.7); 
-            padding: 10px, 2vw;          
+            /* background-color: rgba(240, 240, 240, 0.7);  */
+            /* padding: 10px, 2vw;           */
+        }
+        .result-container{
+            padding: 20vh 20vw;
+            border-radius: 20px;
         }
     </style>
-    <div class="result-box">
-    {{MU_result}} 
+    <div class="height-container">
+        <div class="result-container hidden" id="success-container" style="background-color: rgba(200, 240, 200, 0.7);">
+            <h1>Matchup Advantage</h1>
+            <h3>This is a strong matchup for you.</h3>
+        </div>
+        <div class="result-container hidden" id="failure-container" style="background-color: rgba(240, 200, 200, 0.7);">
+            <h1>Matchup Disadvantage</h1>
+            <h3>This is a bad matchup for you.</h3>
+        </div>
     </div>
+    <script>
+        const successContainer = document.getElementById('success-container');
+        const failureContainer = document.getElementById('failure-container');
+        const res = {{MU_result}};
+        if(res===1){
+            successContainer.classList.remove("hidden")
+        }
+        else{
+            failureContainer.classList.remove("hidden")   
+        }
+    </script>
 {% endblock body %}
 
